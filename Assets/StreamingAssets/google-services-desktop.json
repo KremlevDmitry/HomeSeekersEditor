@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "872686543907",
+    "firebase_url": "https://home-seekers-96bca-default-rtdb.firebaseio.com",
+    "project_id": "home-seekers-96bca",
+    "storage_bucket": "home-seekers-96bca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872686543907:android:18c94b3363d84640ab3d96",
+        "android_client_info": {
+          "package_name": "com.MishaGames.HomeSeekers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ImlRkbdGWekc_OxuKtLKLoCxSfWS3bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

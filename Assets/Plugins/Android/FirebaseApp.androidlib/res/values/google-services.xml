@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
+  <string name="firebase_database_url" translatable="false">https://home-seekers-96bca-default-rtdb.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">872686543907</string>
+  <string name="google_storage_bucket" translatable="false">home-seekers-96bca.appspot.com</string>
+  <string name="project_id" translatable="false">home-seekers-96bca</string>
+  <string name="google_api_key" translatable="false">AIzaSyD7ImlRkbdGWekc_OxuKtLKLoCxSfWS3bo</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD7ImlRkbdGWekc_OxuKtLKLoCxSfWS3bo</string>
+  <string name="google_app_id" translatable="false">1:872686543907:android:18c94b3363d84640ab3d96</string>
+</resources>

@@ -1,0 +1,5 @@
+/Users/dmitry/Desktop/Unity/HomeSeekers/.utmp/RelWithDebInfo/3c5dk2i2/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/dmitry/Desktop/Unity/HomeSeekers/.utmp/RelWithDebInfo/3c5dk2i2/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/dmitry/Desktop/Unity/HomeSeekers/.utmp/RelWithDebInfo/3c5dk2i2/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/dmitry/Desktop/Unity/HomeSeekers/.utmp/RelWithDebInfo/3c5dk2i2/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/dmitry/Desktop/Unity/HomeSeekers/.utmp/RelWithDebInfo/3c5dk2i2/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
