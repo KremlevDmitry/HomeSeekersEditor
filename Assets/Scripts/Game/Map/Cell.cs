@@ -16,7 +16,8 @@ public abstract class Cell<Cs, CValue> : MonoBehaviour
         _cells = cells;
         _value = value;
 
-        GetComponent<SpriteRenderer>().sprite = UnityEngine.Resources.Load<Sprite>(spriteName);
+        gameObject.name = value.Id;
+        GetComponent<SpriteRenderer>().sprite = UnityEngine.Resources.Load<Sprite>($"{spriteName}.png");
 
         SetPosition(new Vector3(_value.XPosition, _value.YPosition, zPos));
     }
