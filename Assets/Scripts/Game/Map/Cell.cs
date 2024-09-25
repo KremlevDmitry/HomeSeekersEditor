@@ -18,13 +18,14 @@ public abstract class Cell<Cs, CValue> : MonoBehaviour
         _value = value;
 
         gameObject.name = value.Id;
-        if (UnityEngine.Resources.Load($"{spriteName}") == null)
-        {
-            Debug.Log($"{spriteName}");
-        }
         GetComponent<SpriteRenderer>().sprite = UnityEngine.Resources.Load<Sprite>($"{spriteName}");
+        if (GetComponent<SpriteRenderer>().sprite == null)
+        {
+            Debug.Log($"{spriteName} did not found");
+        }
 
         SetPosition(new Vector3(_value.XPosition, _value.YPosition, zPos));
+
     }
 
     public void SetPosition(Vector3 position)

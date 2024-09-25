@@ -28,7 +28,7 @@ public class MapLoader : MonoBehaviour
     {
         _database.GetReference(MAP).GetValueAsync().ContinueWith(task =>
         {
-            Map.Instance.Value = MapValue.FromDataSnapshot(task.Result);
+            //Map.Instance.Value = MapValue.FromDataSnapshot(task.Result);
             //Debug.Log(MapValue.ToJson(Map.Instance.Value));
         });
     }

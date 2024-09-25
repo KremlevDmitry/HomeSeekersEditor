@@ -24,8 +24,8 @@ public class MapValue
 
     public static MapValue FromJsonFile(string fileName)
     {
-        float delta = 83f;
         //float delta = 1f;
+        float delta = 95f;
         string filePath = $"{Application.persistentDataPath}/{fileName}";
 
         MapValue mapValue = new();
@@ -44,7 +44,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Characters != null)
             foreach (var value in temporalMap.objects.Characters)
@@ -52,7 +54,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Clouds != null)
             foreach (var value in temporalMap.objects.Clouds)
@@ -60,7 +64,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Decals != null)
             foreach (var value in temporalMap.objects.Decals)
@@ -68,7 +74,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Resources != null)
             foreach (var value in temporalMap.objects.Resources)
@@ -76,7 +84,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Roads != null)
             foreach (var value in temporalMap.objects.Roads)
@@ -84,7 +94,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Statics != null)
             foreach (var value in temporalMap.objects.Statics)
@@ -92,7 +104,9 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         if (temporalMap.objects.Tiles != null)
             foreach (var value in temporalMap.objects.Tiles)
@@ -100,66 +114,68 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta,
+                    value.placement.scale.x,
+                    value.placement.scale.y));
 
         return mapValue;
     }
 
-    public static MapValue FromDataSnapshot(DataSnapshot dataSnapshot)
-    {
-        dataSnapshot = dataSnapshot.Child(OBJECTS);
-        MapValue mapValue = new();
+    //public static MapValue FromDataSnapshot(DataSnapshot dataSnapshot)
+    //{
+    //    dataSnapshot = dataSnapshot.Child(OBJECTS);
+    //    MapValue mapValue = new();
 
-        mapValue.Buildings = new();
-        var buildings = dataSnapshot.Child(BUILDING);
-        foreach (var buildingData in buildings.Children)
-        {
-            var building = new BuildingCellValue(
-                buildingData.Key,
-                buildingData.Child(SPRITE_NAME).Value.ToString(),
-                DistanceConverter.ToGame(float.Parse(buildingData.Child(X_POSITION).Value.ToString())),
-                -DistanceConverter.ToGame(float.Parse(buildingData.Child(Y_POSITION).Value.ToString())));
-            mapValue.Buildings.Add(building);
-        }
+    //    mapValue.Buildings = new();
+    //    var buildings = dataSnapshot.Child(BUILDING);
+    //    foreach (var buildingData in buildings.Children)
+    //    {
+    //        var building = new BuildingCellValue(
+    //            buildingData.Key,
+    //            buildingData.Child(SPRITE_NAME).Value.ToString(),
+    //            DistanceConverter.ToGame(float.Parse(buildingData.Child(X_POSITION).Value.ToString())),
+    //            -DistanceConverter.ToGame(float.Parse(buildingData.Child(Y_POSITION).Value.ToString())));
+    //        mapValue.Buildings.Add(building);
+    //    }
 
-        mapValue.Resources = new();
-        var resources = dataSnapshot.Child(RESOURCE);
-        foreach (var resourceData in resources.Children)
-        {
-            var resource = new ResourceCellValue(
-                resourceData.Key,
-                resourceData.Child(SPRITE_NAME).Value.ToString(),
-                DistanceConverter.ToGame(float.Parse(resourceData.Child(X_POSITION).Value.ToString())),
-                -DistanceConverter.ToGame(float.Parse(resourceData.Child(Y_POSITION).Value.ToString())));
-            mapValue.Resources.Add(resource);
-        }
+    //    mapValue.Resources = new();
+    //    var resources = dataSnapshot.Child(RESOURCE);
+    //    foreach (var resourceData in resources.Children)
+    //    {
+    //        var resource = new ResourceCellValue(
+    //            resourceData.Key,
+    //            resourceData.Child(SPRITE_NAME).Value.ToString(),
+    //            DistanceConverter.ToGame(float.Parse(resourceData.Child(X_POSITION).Value.ToString())),
+    //            -DistanceConverter.ToGame(float.Parse(resourceData.Child(Y_POSITION).Value.ToString())));
+    //        mapValue.Resources.Add(resource);
+    //    }
 
-        mapValue.Rocks = new();
-        var rocks = dataSnapshot.Child(ROCK);
-        foreach (var rockData in rocks.Children)
-        {
-            var rock = new RockCellValue(
-                rockData.Key,
-                rockData.Child(SPRITE_NAME).Value.ToString(),
-                DistanceConverter.ToGame(float.Parse(rockData.Child(X_POSITION).Value.ToString())),
-                -DistanceConverter.ToGame(float.Parse(rockData.Child(Y_POSITION).Value.ToString())));
-            mapValue.Rocks.Add(rock);
-        }
+    //    mapValue.Rocks = new();
+    //    var rocks = dataSnapshot.Child(ROCK);
+    //    foreach (var rockData in rocks.Children)
+    //    {
+    //        var rock = new RockCellValue(
+    //            rockData.Key,
+    //            rockData.Child(SPRITE_NAME).Value.ToString(),
+    //            DistanceConverter.ToGame(float.Parse(rockData.Child(X_POSITION).Value.ToString())),
+    //            -DistanceConverter.ToGame(float.Parse(rockData.Child(Y_POSITION).Value.ToString())));
+    //        mapValue.Rocks.Add(rock);
+    //    }
 
-        mapValue.Tiles = new();
-        var tiles = dataSnapshot.Child(TILE);
-        foreach (var tileData in tiles.Children)
-        {
-            var tile = new TileCellValue(
-                tileData.Key,
-                tileData.Child(SPRITE_NAME).Value.ToString(),
-                DistanceConverter.ToGame(float.Parse(tileData.Child(X_POSITION).Value.ToString())),
-                -DistanceConverter.ToGame(float.Parse(tileData.Child(Y_POSITION).Value.ToString())));
-            mapValue.Tiles.Add(tile);
-        }
+    //    mapValue.Tiles = new();
+    //    var tiles = dataSnapshot.Child(TILE);
+    //    foreach (var tileData in tiles.Children)
+    //    {
+    //        var tile = new TileCellValue(
+    //            tileData.Key,
+    //            tileData.Child(SPRITE_NAME).Value.ToString(),
+    //            DistanceConverter.ToGame(float.Parse(tileData.Child(X_POSITION).Value.ToString())),
+    //            -DistanceConverter.ToGame(float.Parse(tileData.Child(Y_POSITION).Value.ToString())));
+    //        mapValue.Tiles.Add(tile);
+    //    }
 
-        return mapValue;
-    }
+    //    return mapValue;
+    //}
 
     public static string ToJson(MapValue map)
     {
