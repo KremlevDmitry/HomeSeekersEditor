@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4fd30418dcc1045d597dcd3bd6e7e80d
+guid: 4ffe278c403b44fd398acea33fc762f8
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2867652055791864248
     second: _0003_Cliff_3_Shadow.png_0
+  - first:
+      213: -8551431763989443915
+    second: _0003_Cliff_3_Shadow.png_1
+  - first:
+      213: 1443765731807385122
+    second: _0003_Cliff_3_Shadow.png_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -137,10 +143,10 @@ TextureImporter:
       name: _0003_Cliff_3_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 799
-        height: 365
+        x: 65
+        y: 306
+        width: 579
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,6 +156,48 @@ TextureImporter:
       bones: []
       spriteID: 8b984ece952fbc720800000000000000
       internalID: 2867652055791864248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _0003_Cliff_3_Shadow.png_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 498
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5baca6a3e16335980800000000000000
+      internalID: -8551431763989443915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _0003_Cliff_3_Shadow.png_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 798
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226d24f9849490410800000000000000
+      internalID: 1443765731807385122
       vertices: []
       indices: 
       edges: []
@@ -166,6 +214,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       _0003_Cliff_3_Shadow.png_0: 2867652055791864248
+      _0003_Cliff_3_Shadow.png_1: -8551431763989443915
+      _0003_Cliff_3_Shadow.png_2: 1443765731807385122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

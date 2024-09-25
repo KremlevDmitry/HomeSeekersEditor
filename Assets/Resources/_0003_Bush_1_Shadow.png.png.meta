@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f41f5ca248b2465584de05483a3490c
+guid: fdfb62f1f67df49cdaaf5c03e127eda1
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -137,10 +137,10 @@ TextureImporter:
       name: _0003_Bush_1_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 236
-        height: 119
+        width: 248
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

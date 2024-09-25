@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23af170bbff334f4fa68202601336337
+guid: 1d8421a4cf75444669810b8115df65c2
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -11,15 +11,6 @@ TextureImporter:
   - first:
       213: -8868860793074623136
     second: _0003_Old_Bridge_Shadow.png_2
-  - first:
-      213: 6098883840897544230
-    second: _0003_Old_Bridge_Shadow.png_3
-  - first:
-      213: 4875408712758837649
-    second: _0003_Old_Bridge_Shadow.png_4
-  - first:
-      213: 340156644103432219
-    second: _0003_Old_Bridge_Shadow.png_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -152,10 +143,10 @@ TextureImporter:
       name: _0003_Old_Bridge_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 552
-        y: 387
-        width: 344
-        height: 181
+        x: 606
+        y: 599
+        width: 15
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +164,10 @@ TextureImporter:
       name: _0003_Old_Bridge_Shadow.png_1
       rect:
         serializedVersion: 2
-        x: 875
-        y: 475
-        width: 52
-        height: 41
+        x: 11
+        y: 0
+        width: 622
+        height: 324
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +185,10 @@ TextureImporter:
       name: _0003_Old_Bridge_Shadow.png_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 203
-        width: 189
-        height: 97
+        x: 530
+        y: 243
+        width: 615
+        height: 349
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,69 +198,6 @@ TextureImporter:
       bones: []
       spriteID: 06dd562191a7be480800000000000000
       internalID: -8868860793074623136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _0003_Old_Bridge_Shadow.png_3
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 268
-        width: 188
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 620711f3a8693a450800000000000000
-      internalID: 6098883840897544230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _0003_Old_Bridge_Shadow.png_4
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 95
-        width: 88
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 191c5daa46ee8a340800000000000000
-      internalID: 4875408712758837649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _0003_Old_Bridge_Shadow.png_5
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 0
-        width: 530
-        height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1826c36aaa78b400800000000000000
-      internalID: 340156644103432219
       vertices: []
       indices: 
       edges: []
@@ -288,9 +216,6 @@ TextureImporter:
       _0003_Old_Bridge_Shadow.png_0: -4940531927761106238
       _0003_Old_Bridge_Shadow.png_1: 738706878918113125
       _0003_Old_Bridge_Shadow.png_2: -8868860793074623136
-      _0003_Old_Bridge_Shadow.png_3: 6098883840897544230
-      _0003_Old_Bridge_Shadow.png_4: 4875408712758837649
-      _0003_Old_Bridge_Shadow.png_5: 340156644103432219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

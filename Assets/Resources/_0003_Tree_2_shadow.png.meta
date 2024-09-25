@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 76974da7bd8fd4c66ab8fa4bd1d592cf
+guid: 5cdc76acde8aa42cebe848be4c7625f5
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6992390438105383326
     second: _0003_Tree_2_shadow_0
+  - first:
+      213: 6658012873254759594
+    second: _0003_Tree_2_shadow_1
+  - first:
+      213: 4088898436062151029
+    second: _0003_Tree_2_shadow_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -137,10 +143,10 @@ TextureImporter:
       name: _0003_Tree_2_shadow_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 0
-        width: 220
-        height: 111
+        x: 156
+        y: 498
+        width: 142
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,6 +156,48 @@ TextureImporter:
       bones: []
       spriteID: 26ef3ed91f906fe90800000000000000
       internalID: -6992390438105383326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _0003_Tree_2_shadow_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 427
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aace35cbe63066c50800000000000000
+      internalID: 6658012873254759594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _0003_Tree_2_shadow_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 364
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5718224b67faeb830800000000000000
+      internalID: 4088898436062151029
       vertices: []
       indices: 
       edges: []
@@ -166,6 +214,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       _0003_Tree_2_shadow_0: -6992390438105383326
+      _0003_Tree_2_shadow_1: 6658012873254759594
+      _0003_Tree_2_shadow_2: 4088898436062151029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

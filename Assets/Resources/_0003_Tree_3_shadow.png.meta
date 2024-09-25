@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99be167c594fe460c8c1523e63490ed7
+guid: d849e925258024c73955d48d7c01363d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -137,10 +137,10 @@ TextureImporter:
       name: _0003_Tree_3_shadow_0
       rect:
         serializedVersion: 2
-        x: 58
+        x: 18
         y: 0
-        width: 166
-        height: 85
+        width: 250
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

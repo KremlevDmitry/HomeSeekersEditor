@@ -10,11 +10,15 @@ public class Map : MonoSingleton<Map>
     [SerializeField]
     private TileCells _tileCells = default;
     [SerializeField]
+    private TileCells _roadsCells = default;
+    [SerializeField]
     private RockCells _rockCells = default;
     [SerializeField]
     private BuildingCells _buildingCells = default;
     [SerializeField]
     private ResourceCells _resourceCells = default;
+    [SerializeField]
+    private TileCells _cloudsCells = default;
 
 
     protected override void Awake()
@@ -32,9 +36,11 @@ public class Map : MonoSingleton<Map>
         Destroy();
 
         _tileCells.Generate(Value.Tiles);
+        _roadsCells.Generate(Value.Roads);
         _rockCells.Generate(Value.Rocks);
         _buildingCells.Generate(Value.Buildings);
         _resourceCells.Generate(Value.Resources);
+        _cloudsCells.Generate(Value.Clouds);
     }
 
     public void Destroy()

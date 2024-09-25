@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b53f60ae596f4c42bbb121e1fbbeb4e
+guid: 4396f23221e734199b0b9a20b05c3112
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -137,10 +137,10 @@ TextureImporter:
       name: _0003_Log_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 545
-        height: 316
+        width: 560
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

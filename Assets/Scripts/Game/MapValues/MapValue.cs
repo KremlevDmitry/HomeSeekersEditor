@@ -18,6 +18,8 @@ public class MapValue
     public List<ResourceCellValue> Resources;
     public List<RockCellValue> Rocks;
     public List<TileCellValue> Tiles;
+    public List<TileCellValue> Roads;
+    public List<TileCellValue> Clouds;
 
 
     public static MapValue FromJsonFile(string fileName)
@@ -33,6 +35,8 @@ public class MapValue
         mapValue.Resources = new List<ResourceCellValue>();
         mapValue.Rocks = new List<RockCellValue>();
         mapValue.Tiles = new List<TileCellValue>();
+        mapValue.Roads = new List<TileCellValue>();
+        mapValue.Clouds = new List<TileCellValue>();
 
         if (temporalMap.objects.Buildings != null)
             foreach (var value in temporalMap.objects.Buildings)
@@ -40,7 +44,7 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Characters != null)
             foreach (var value in temporalMap.objects.Characters)
@@ -48,15 +52,15 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Clouds != null)
             foreach (var value in temporalMap.objects.Clouds)
-                mapValue.Buildings.Add(new BuildingCellValue(
+                mapValue.Clouds.Add(new TileCellValue(
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Decals != null)
             foreach (var value in temporalMap.objects.Decals)
@@ -64,23 +68,23 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Resources != null)
             foreach (var value in temporalMap.objects.Resources)
-            mapValue.Buildings.Add(new BuildingCellValue(
-                value.name,
-                value.id,
-                value.placement.local_offset.x / delta,
-                value.placement.local_offset.y / delta));
-
-        if (temporalMap.objects.Roads != null)
-            foreach (var value in temporalMap.objects.Roads)
                 mapValue.Buildings.Add(new BuildingCellValue(
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
+
+        if (temporalMap.objects.Roads != null)
+            foreach (var value in temporalMap.objects.Roads)
+                mapValue.Roads.Add(new TileCellValue(
+                    value.name,
+                    value.id,
+                    value.placement.local_offset.x / delta,
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Statics != null)
             foreach (var value in temporalMap.objects.Statics)
@@ -88,7 +92,7 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         if (temporalMap.objects.Tiles != null)
             foreach (var value in temporalMap.objects.Tiles)
@@ -96,7 +100,7 @@ public class MapValue
                     value.name,
                     value.id,
                     value.placement.local_offset.x / delta,
-                    value.placement.local_offset.y / delta));
+                    -value.placement.local_offset.y / delta));
 
         return mapValue;
     }

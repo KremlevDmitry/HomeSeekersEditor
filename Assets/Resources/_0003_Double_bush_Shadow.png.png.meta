@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0d1cdbb8e76714a0f99b6e1df3ff8f9b
+guid: 9925552987bbf45c4bda6fe9a1a942fa
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3400677993003503384
     second: _0003_Double_bush_Shadow.png_0
+  - first:
+      213: 2224167483976576361
+    second: _0003_Double_bush_Shadow.png_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -137,10 +140,10 @@ TextureImporter:
       name: _0003_Double_bush_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 276
-        height: 113
+        width: 282
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,6 +153,27 @@ TextureImporter:
       bones: []
       spriteID: 81f4678fd92a13f20800000000000000
       internalID: 3400677993003503384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _0003_Double_bush_Shadow.png_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96de563ea84ddde10800000000000000
+      internalID: 2224167483976576361
       vertices: []
       indices: 
       edges: []
@@ -166,6 +190,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       _0003_Double_bush_Shadow.png_0: 3400677993003503384
+      _0003_Double_bush_Shadow.png_1: 2224167483976576361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

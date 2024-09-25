@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc3510ef46af149e7a37acb57b52378e
+guid: 61570e1beed524f1ca35e056e44ed407
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -137,10 +137,10 @@ TextureImporter:
       name: _0003_Cliff_1_Shadow.png_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 1046
-        height: 485
+        width: 1044
+        height: 510
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

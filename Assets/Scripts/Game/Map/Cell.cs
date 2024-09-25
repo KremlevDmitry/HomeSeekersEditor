@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public abstract class Cell<Cs, CValue> : MonoBehaviour
@@ -17,7 +18,11 @@ public abstract class Cell<Cs, CValue> : MonoBehaviour
         _value = value;
 
         gameObject.name = value.Id;
-        GetComponent<SpriteRenderer>().sprite = UnityEngine.Resources.Load<Sprite>($"{spriteName}.png");
+        if (UnityEngine.Resources.Load($"{spriteName}") == null)
+        {
+            Debug.Log($"{spriteName}");
+        }
+        GetComponent<SpriteRenderer>().sprite = UnityEngine.Resources.Load<Sprite>($"{spriteName}");
 
         SetPosition(new Vector3(_value.XPosition, _value.YPosition, zPos));
     }
