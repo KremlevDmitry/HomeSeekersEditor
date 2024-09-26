@@ -13,7 +13,7 @@ public class ResourceCells : Cells<ResourceCell, ResourceCellValue>
 
     public override void Generate(List<ResourceCellValue> cellsValues)
     {
-        cellsValues = cellsValues.OrderBy(value => value.XPosition).OrderBy(value => value.YPosition).ToList();
+        //cellsValues = cellsValues.OrderBy(value => value.YPosition).OrderBy(value => value.XPosition).ToList();
 
         base.Generate(cellsValues);
     }

@@ -1,0 +1,7 @@
+public class RoadCellValue : CellValue
+{
+    public RoadCellValue(string id, string spriteName, float xPosition, float yPosition, float xScale, float yScale) :
+        base(id, spriteName, xPosition, yPosition, xScale, yScale)
+    {
+    }
+}

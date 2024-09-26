@@ -18,105 +18,97 @@ public class MapValue
     public List<ResourceCellValue> Resources;
     public List<RockCellValue> Rocks;
     public List<TileCellValue> Tiles;
-    public List<TileCellValue> Roads;
+    public List<RoadCellValue> Roads;
     public List<TileCellValue> Clouds;
 
 
     public static MapValue FromJsonFile(string fileName)
     {
         //float delta = 1f;
-        float delta = 95f;
+        float delta = 100f;
         string filePath = $"{Application.persistentDataPath}/{fileName}";
 
+        string fileContent = File.ReadAllText(filePath);
         MapValue mapValue = new();
-        var temporalMap = JsonUtility.FromJson<TemporalMapValue.Application>(File.ReadAllText(filePath));
+        var temporalMap = JsonUtility.FromJson<TemporalMapValue.Application>(fileContent);
 
         mapValue.Buildings = new List<BuildingCellValue>();
         mapValue.Resources = new List<ResourceCellValue>();
         mapValue.Rocks = new List<RockCellValue>();
         mapValue.Tiles = new List<TileCellValue>();
-        mapValue.Roads = new List<TileCellValue>();
+        mapValue.Roads = new List<RoadCellValue>();
         mapValue.Clouds = new List<TileCellValue>();
 
-        if (temporalMap.objects.Buildings != null)
-            foreach (var value in temporalMap.objects.Buildings)
+        if (temporalMap.map.objects.BuildingCell != null)
+            foreach (var value in temporalMap.map.objects.BuildingCell)
                 mapValue.Buildings.Add(new BuildingCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Characters != null)
-            foreach (var value in temporalMap.objects.Characters)
+        if (temporalMap.map.objects.CharacterCell != null)
+            foreach (var value in temporalMap.map.objects.CharacterCell)
                 mapValue.Buildings.Add(new BuildingCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Clouds != null)
-            foreach (var value in temporalMap.objects.Clouds)
+        if (temporalMap.map.objects.CloudCell != null)
+            foreach (var value in temporalMap.map.objects.CloudCell)
                 mapValue.Clouds.Add(new TileCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Decals != null)
-            foreach (var value in temporalMap.objects.Decals)
-                mapValue.Buildings.Add(new BuildingCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
 
-        if (temporalMap.objects.Resources != null)
-            foreach (var value in temporalMap.objects.Resources)
-                mapValue.Buildings.Add(new BuildingCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+        if (temporalMap.map.objects.ResourceCell != null)
+            foreach (var value in temporalMap.map.objects.ResourceCell)
+                mapValue.Resources.Add(new ResourceCellValue(
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Roads != null)
-            foreach (var value in temporalMap.objects.Roads)
-                mapValue.Roads.Add(new TileCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+        if (temporalMap.map.objects.RoadCell != null)
+            foreach (var value in temporalMap.map.objects.RoadCell)
+                mapValue.Roads.Add(new RoadCellValue(
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Statics != null)
-            foreach (var value in temporalMap.objects.Statics)
-                mapValue.Buildings.Add(new BuildingCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+        if (temporalMap.map.objects.StaticCell != null)
+            foreach (var value in temporalMap.map.objects.StaticCell)
+                mapValue.Rocks.Add(new RockCellValue(
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x) * 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
-        if (temporalMap.objects.Tiles != null)
-            foreach (var value in temporalMap.objects.Tiles)
+        if (temporalMap.map.objects.TileCell != null)
+            foreach (var value in temporalMap.map.objects.TileCell)
                 mapValue.Tiles.Add(new TileCellValue(
-                    value.name,
-                    value.id,
-                    value.placement.local_offset.x / delta,
-                    -value.placement.local_offset.y / delta,
-                    value.placement.scale.x,
-                    value.placement.scale.y));
+                    value.asset_id,
+                    value.asset_id,
+                    (value.geo[0].x + (value.geo[2].x - value.geo[0].x)* 0.5f) / delta,
+                    -(value.geo[0].y + (value.geo[2].y - value.geo[0].y) * 0.5f) / delta,
+                    1,
+                    1));
 
         return mapValue;
     }

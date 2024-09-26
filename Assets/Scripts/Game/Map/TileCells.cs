@@ -11,7 +11,7 @@ public class TileCells : Cells<TileCell, TileCellValue>
 
     public override void Generate(List<TileCellValue> cellsValues)
     {
-        cellsValues = cellsValues.OrderBy(value => value.XPosition).OrderBy(value => value.YPosition).ToList();
+        //cellsValues = cellsValues.OrderBy(value => value.YPosition).OrderBy(value => value.XPosition).ToList();
 
         base.Generate(cellsValues);
     }

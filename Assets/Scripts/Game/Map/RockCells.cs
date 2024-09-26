@@ -13,7 +13,7 @@ public class RockCells : Cells<RockCell, RockCellValue>
 
     public override void Generate(List<RockCellValue> cellsValues)
     {
-        cellsValues = cellsValues.OrderBy(value => value.XPosition).OrderBy(value => value.YPosition).ToList();
+        //cellsValues = cellsValues.OrderBy(value => value.YPosition).OrderBy(value => value.XPosition).ToList();
 
         base.Generate(cellsValues);
     }

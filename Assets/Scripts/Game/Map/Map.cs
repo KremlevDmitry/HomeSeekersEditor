@@ -10,7 +10,7 @@ public class Map : MonoSingleton<Map>
     [SerializeField]
     private TileCells _tileCells = default;
     [SerializeField]
-    private TileCells _roadsCells = default;
+    private RoadCells _roadsCells = default;
     [SerializeField]
     private RockCells _rockCells = default;
     [SerializeField]
@@ -52,6 +52,7 @@ public class Map : MonoSingleton<Map>
     private void Init()
     {
         _tileCells.Init(this);
+        _roadsCells.Init(this);
         _rockCells.Init(this);
         _buildingCells.Init(this);
         _resourceCells.Init(this);
